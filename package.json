@@ -1,0 +1,20 @@
+{
+  "name": "clone_catchmind",
+  "version": "1.0.0",
+  "description": "clone catchmind",
+  "main": "index.js",
+  "repository": "https://github.com/seongjunhwang/clone_catchmind.git",
+  "author": "seongjunhwang <samkukzi3@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6",
+    "socket.io": "^3.0.3"
+  },
+  "scripts": {
+    "dev:server": "nodemon --exec babel-node src/server"
+  }
+}
