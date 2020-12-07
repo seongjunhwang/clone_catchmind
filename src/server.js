@@ -20,5 +20,8 @@ const io = require("socket.io")(server);
 let sockets = [];
 
 io.on("connection", socket => {
-  socket.on("newMessage", (data) => console.log(data));
+  socket.on("newMessage", ({message}) => {
+    socket.broadcast.emit("messageNoti", {message});
+  });
+  
 });
