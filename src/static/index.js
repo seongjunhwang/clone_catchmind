@@ -1,5 +1,6 @@
 const socket = io("/");
 
-socket.on("hello", () => console.log("somebody joined"));
+function sendMesseage(message) {
+    socket.emit("newMessage", {message});
+}
 
-setTimeout(() => socket.emit("helloGuys", 3000));

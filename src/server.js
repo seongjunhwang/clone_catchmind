@@ -20,5 +20,5 @@ const io = require("socket.io")(server);
 let sockets = [];
 
 io.on("connection", socket => {
-  socket.on("helloGuys", () => console.log("the client said hello"));
+  socket.on("newMessage", (data) => console.log(data));
 });
