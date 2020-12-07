@@ -20,9 +20,5 @@ const io = require("socket.io")(server);
 let sockets = [];
 
 io.on("connection", socket => {
-  sockets.push(socket.id);
+  socket.on("helloGuys", () => console.log("the client said hello"));
 });
-
-setInterval(() => {
-    console.log(sockets)
-}, 1000);
